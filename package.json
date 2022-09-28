@@ -10,9 +10,9 @@
     "http-server": "http-server -c-1 dist/merchant -p 8000",
     "merchant:start": "npm run build:prod && npm run http-server",
     "merchant:start-with-watch": "concurrently \"npm run build:watch\" \"npm run http-server\"",
-    "start": "npm run merchant:start",
     "test": "ng test",
-    "heroku-postbuild": "ng build --configuration production"
+    "heroku-postbuild": "ng build --configuration production",
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
