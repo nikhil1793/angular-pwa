@@ -1,0 +1,28 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/merchant-core/src",
+  "prefix": "merchant-workspace",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/merchant-core"
+      ],
+      "options": {
+        "jestConfig": "libs/merchant-core/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/merchant-core/**/*.ts",
+          "libs/merchant-core/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

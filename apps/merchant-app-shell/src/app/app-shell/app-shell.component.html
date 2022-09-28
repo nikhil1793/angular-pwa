@@ -1,0 +1,12 @@
+<main>
+    <router-outlet></router-outlet>
+    <section class="notification">
+        <button class="button primary"
+                (click)="subscribeToNotifications()"
+                [disabled]="pushNotificationService.subscription">Subscribe</button>
+
+        <button class="button danger"
+                (click)="notify()">Notify</button>
+
+    </section>
+</main>

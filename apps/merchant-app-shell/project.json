@@ -1,0 +1,104 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/merchant-app-shell/src",
+  "prefix": "merchant-workspace",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/merchant-app-shell",
+        "index": "apps/merchant-app-shell/src/index.html",
+        "main": "apps/merchant-app-shell/src/main.ts",
+        "polyfills": "apps/merchant-app-shell/src/polyfills.ts",
+        "tsConfig": "apps/merchant-app-shell/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/merchant-app-shell/src/favicon.ico",
+          "apps/merchant-app-shell/src/assets",
+          "apps/merchant-app-shell/src/manifest.webmanifest"
+        ],
+        "styles": [
+          "apps/merchant-app-shell/src/styles.scss",
+          "apps/merchant-app-shell/src/assets/scss/bootstrap.scss"
+        ],
+        "scripts": [],
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/merchant-app-shell/ngsw-config.json"
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/merchant-app-shell/src/environments/environment.ts",
+              "with": "apps/merchant-app-shell/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "merchant-app-shell:build:production"
+        },
+        "development": {
+          "browserTarget": "merchant-app-shell:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "merchant-app-shell:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/merchant-app-shell/**/*.ts",
+          "apps/merchant-app-shell/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/merchant-app-shell"
+      ],
+      "options": {
+        "jestConfig": "apps/merchant-app-shell/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

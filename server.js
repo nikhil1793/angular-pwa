@@ -1,8 +1,8 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-app.use(express.static(__dirname + "/dist/merchant"));
+app.use(express.static(__dirname + "dist/apps/merchant-app-shell"));
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/dist/merchant/index.html"));
+  res.sendFile(path.join(__dirname + "dist/apps/merchant-app-shell"));
 });
 app.listen(process.env.PORT || 5000);

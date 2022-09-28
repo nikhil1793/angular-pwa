@@ -1,0 +1,26 @@
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .button {
+        padding: 0.8rem;
+        color: black;
+        border-radius: 5px;
+        &.primary {
+            background-color: lightgreen;
+        }
+        &.danger {
+            background-color: lightcoral;
+        }
+
+        &:disabled,
+        &[disabled] {
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+            cursor:not-allowed;
+        }
+    }
+}
