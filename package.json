@@ -11,7 +11,7 @@
     "build:watch": "nx build --configuration production --watch",
     "http-server": "http-server -c-1 dist/apps/merchant-app-shell -p 8000",
     "start-pwa": "npm run build:prod && npm run http-server",
-    "heroku-postbuild": "npm run build --configuration production",
+    "heroku-postbuild": "npm run build:prod",
     "start": "node server.js"
   },
   "private": true,
