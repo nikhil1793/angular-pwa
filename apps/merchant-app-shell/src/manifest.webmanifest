@@ -1,11 +1,12 @@
 {
-  "name": "merchant-app-shell",
-  "short_name": "merchant-app-shell",
+  "name": "angular-pwa",
+  "short_name": "angular-pwa",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "description":"NX Angular app with PWA Support",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
