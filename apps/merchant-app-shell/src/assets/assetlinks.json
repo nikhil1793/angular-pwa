@@ -1,6 +1,6 @@
 [{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target" : { "namespace": "android_app", "package_name": "com.herokuapp.angular_nx_pwa.twa",
-                   "sha256_cert_fingerprints": ["4D:39:05:3D:6E:5C:23:A4:D4:B7:25:6B:86:A6:2E:AF:39:C3:DD:BB:BB:66:69:E8:7C:B0:A2:03:79:3D:A8:86"] }
-    }
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "com.herokuapp.angular_nx_pwa.twa",
+                 "sha256_cert_fingerprints": ["E2:D9:FD:03:49:F9:EF:16:B9:E5:74:9F:89:BA:5C:6F:17:D9:BE:CD:BF:44:61:66:B1:14:20:BB:19:48:F8:F9"] }
+  }
 ]
